@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http4s
+spec:
+  selector:
+    matchLabels:
+      app: http4s
+  template:
+    metadata:
+      labels:
+        app: http4s
+    spec:
+      containers:
+      - name: http4s
+        image: mogiliv/http4s
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP

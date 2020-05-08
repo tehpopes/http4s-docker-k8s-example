@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: http4s
+  labels:
+    service: http4s
+spec:
+  type: LoadBalancer
+  selector:
+    app: http4s
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+
