@@ -13,4 +13,6 @@ $ ./deploy-http4s.sh <dockerhub username>
 	c. Login to your docker hub account
 	d. Change <username> in kubernetes/http4s-deployment.yaml to your dockerhub username
 	e. $ kubectl apply -f kubernetes/http4s-deployment.yaml
-	f. $ kubectl apply -f kubernetes/http4s-service.yaml 
+	f. $ kubectl apply -f kubernetes/http4s-service.yaml
+3. Check if endpoint works
+$ curl http://$(minikube ip):<Minikube Exposed Port> 
